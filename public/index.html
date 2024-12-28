@@ -48,7 +48,7 @@
 
         .modal-content {
             position: relative;
-            margin: 10% auto;
+            margin: 20% auto;
             padding: 20px;
             width: 90%;
             max-width: 500px;
@@ -60,7 +60,7 @@
         }
 
         .modal-content h2 {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             font-size: 24px;
         }
 
@@ -98,6 +98,50 @@
             font-weight: bold;
             cursor: pointer;
         }
+
+        .buttonA {
+            background: #2a2a2e;
+            border-radius: 999px;
+            box-shadow: #585858 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: fit-content;
+            word-break: break-word;
+            border: 0;
+        }
+
+        .buttonB {
+            background: #fabb04;
+            border-radius: 999px;
+            box-shadow: #fabb04 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #1a1a1a;
+            cursor: pointer;
+            font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: fit-content;
+            word-break: break-word;
+            border: 0;
+        }
     </style>
 </head>
 
@@ -119,11 +163,26 @@
             <div class="modal-images">
                 <div>
                     <img src="assets/images/resource/whatsapp.png" alt="Join WhatsApp Group">
-                    <a id="joinWhatsAppBtn" class="btn btn-success" target="_blank">Join WhatsApp</a>
+                    <a id="joinWhatsAppBtn" href="#" class="btn btn-success" target="_blank">Join WhatsApp</a>
                 </div>
                 <div>
                     <img src="assets/images/resource/telegram.png" alt="Join Telegram Group">
-                    <a href="https://t.me/your-group-link" class="btn btn-primary" target="_blank">Join Telegram</a>
+                    <a id="joinTelegramBtn" href="#" class="btn btn-primary" target="_blank">Join Telegram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pop Up Modal Structure -->
+    <div id="joinOptModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Join Our Community</h2>
+            <div class="modal-images">
+                <div>
+                    <a id="joinBtn" class="buttonA" target="_blank">Join Free</a>
+                </div>
+                <div>
+                    <a href="premium.html" class="buttonB" target="_blank">Join Premium</a>
                 </div>
             </div>
         </div>
@@ -138,10 +197,10 @@
             <div class="row align-items-center">
                 <div class="col-lg-4">
                     <div class="logo">
-                        <a class="logo_img upper1" href="index-2.html" title="cryptobit">
+                        <a class="logo_img upper1" href="/" title="cryptobit">
                             <img src="assets/images/logo2.png" alt="" height="80px" />
                         </a>
-                        <a class="main_sticky upper1" href="index-2.html" title="cryptobit">
+                        <a class="main_sticky upper1" href="/" title="cryptobit">
                             <img src="assets/images/logo2.png" alt="astute" height="80px" />
                         </a>
                     </div>
@@ -152,18 +211,12 @@
                             <li><a href="/">Home</a>
                             </li>
                             <li><a href="about.html">About</a></li>
-                            <li><a href="#">Services <span>+</span></a>
-                                <ul class="sub-menu upper">
-                                    <li><a href="">Service 1</a></li>
-                                    <li><a href="">Service 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="news.html">News</a>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#service">Services</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a class="contactBtn" href="">Contact</a></li>
                         </ul>
                         <div class="header-button upper1">
-                            <a href="#">Join Now</a>
+                            <a class="joinOptBtn" href="#">Join Now</a>
                         </div>
                     </nav>
                 </div>
@@ -175,18 +228,11 @@
         <div class="mobile-menu">
             <nav class="cripto_menu">
                 <ul class="nav_scroll">
-                    <li><a href="/">Home</a>
-                    </li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#service">Services <span>+</span></a>
-                        <ul class="sub-menu">
-                            <li><a href="">Service 1</a></li>
-                            <li><a href="">Service 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">News</a>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a class="contactBtn" href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -213,7 +259,7 @@
                                 real-time updates.</p>
                         </div>
                         <div class="hero-button">
-                            <a href="#">Join the Zone</a>
+                            <a class="joinOptBtn" href="#">Join the Zone</a>
                         </div>
                     </div>
                     <div class="dreamit-hero-thumb">
@@ -307,7 +353,7 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="feature-bottom-text text-center">
-                        <p> <i class="flaticon-light-bulb"></i> Want to Know More? <span><a href="#">Learn
+                        <p> <i class="flaticon-light-bulb"></i> Want to Know More? <span><a class="contactBtn" href="#">Learn
                                     More</a></span></p>
                     </div>
                 </div>
@@ -389,7 +435,7 @@
                             </div>
                         </div>
                         <div class="about-button2">
-                            <a href="#">Get in Touch</a>
+                            <a class="contactBtn" href="#">Get in Touch</a>
                         </div>
                     </div>
                 </div>
@@ -403,7 +449,7 @@
     <!--==================================================-->
     <!-- Start Last Trading Zone Services Area -->
     <!--==================================================-->
-    <div class="services-area style-two pt-90 pb-100">
+    <div id="service" class="services-area style-two pt-90 pb-100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
@@ -426,7 +472,7 @@
                             actionable insights and secure platforms.</p>
                     </div>
                     <div class="about-button2">
-                        <a href="#">Learn More</a>
+                        <a class="contactBtn" href="#">Learn More</a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
@@ -569,7 +615,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="about-button2 text-right">
-                        <a href="#">Submit a Review</a>
+                        <a class="reviewBtn" href="#">Submit a Review</a>
                     </div>
                 </div>
             </div>
@@ -724,7 +770,8 @@
                         <h4>FAQ</h4>
                         <h1>Frequently Q/A</h1>
                         <p class="section-text">Globally network emerging action items with best-of-breed core
-                            <br>Efficiently build end-to-end mindshare</p>
+                            <br>Efficiently build end-to-end mindshare
+                        </p>
                     </div>
                 </div>
             </div>
@@ -779,7 +826,7 @@
                                 ahead in the market!</p>
                         </div>
                         <div class="contact-form-box-2 text-center">
-                            <form id="subscribe">
+                            <form class="subscribe">
                                 <div class="from-box2">
                                     <input id="email" type="email" placeholder="Enter Your E-Mail">
                                     <button>Subscribe</button>
@@ -802,7 +849,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="widgets-company-info pt-3">
                         <div class="last-trading-logo">
-                            <a class="logo_img" href="index-2.html" title="Last Trading Zone">
+                            <a class="logo_img" href="/" title="Last Trading Zone">
                                 <img src="assets/images/logo2.png" alt="Last Trading Zone Logo" />
                             </a>
                         </div>
@@ -810,12 +857,12 @@
                             <p>Join Last Trading Zone for the latest cryptocurrency trading signals and exclusive
                                 insights from the market!</p>
                         </div>
-                        <div class="company_icon">
+                        <!-- <div class="company_icon">
                             <a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
                             <a class="twitter" href="#"><i class="fa-brands fa-x-twitter"></i></a>
                             <a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a class="pinterest" href="#"><i class="fab fa-pinterest-p"></i></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-6">
@@ -825,11 +872,11 @@
                                 <h4 class="widget-title">Crypto Resources</h4>
                                 <div class="menu-quick-link-content">
                                     <ul class="menu">
-                                        <li><a href="#">What is Cryptocurrency</a></li>
-                                        <li><a href="#">Crypto Trading Signals</a></li>
-                                        <li><a href="#">ICO Details</a></li>
-                                        <li><a href="#">Market Analysis</a></li>
-                                        <li><a href="#">Cryptocurrency Exchanges</a></li>
+                                        <li><a href="news.html">What is Cryptocurrency</a></li>
+                                        <li><a href="news.html">Crypto Trading Signals</a></li>
+                                        <li><a href="news.html">ICO Details</a></li>
+                                        <li><a href="news.html">Market Analysis</a></li>
+                                        <li><a href="news.html">Cryptocurrency Exchanges</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -839,11 +886,11 @@
                                 <h4 class="widget-title">Useful Links</h4>
                                 <div class="menu-quick-link-content">
                                     <ul class="menu">
-                                        <li><a href="#">Crypto News</a></li>
+                                        <li><a href="news.html">Crypto News</a></li>
                                         <li><a href="#">Terms & Conditions</a></li>
-                                        <li><a href="#">Join Our Community</a></li>
-                                        <li><a href="#">Return Policy</a></li>
-                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a class="joinOptBtn" href="#">Join Our Community</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a class="contactBtn" href="#">Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -856,9 +903,9 @@
                                         directly from Last Trading Zone!</p>
                                 </div>
                                 <div class="contact-form-box-2 text-center">
-                                    <form>
+                                    <form class="subscribe">
                                         <div class="from-box1">
-                                            <input type="text" placeholder="Enter Your E-Mail">
+                                            <input id="email2" type="email" placeholder="Enter Your E-Mail">
                                             <button><i class="fa fa-paper-plane"></i></button>
                                         </div>
                                     </form>
@@ -872,7 +919,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="footer-bottom-content">
                         <div class="footer-bottom-content-copy">
-                            <p>© Last Trading Zone all Rights Reserved. By: <span>Dream-IT</span></p>
+                            <p>© Last Trading Zone all Rights Reserved.</p>
                         </div>
                     </div>
                 </div>
@@ -952,76 +999,109 @@
     <script>
         $(document).ready(function () {
             // Open Modal
-            $("#joinNowBtn").on("click", function () {
-                $("#joinModal").fadeIn();
+            $(".joinOptBtn").on("click", function () {
+                $("#joinOptModal").fadeIn();
             });
 
             // Close Modal
+            $(".close, #joinOptModal").on("click", function (e) {
+                if (e.target === this) {
+                    $("#joinOptModal").fadeOut();
+                }
+            });
+            // Open Free Modal
+            $("#joinBtn").on("click", function () {
+                $("#joinOptModal").fadeOut();
+                $("#joinModal").fadeIn();
+            });
+
+            // Close Free Modal
             $(".close, #joinModal").on("click", function (e) {
                 if (e.target === this) {
                     $("#joinModal").fadeOut();
                 }
             });
 
-            // Send Message on WhatsApp Button Click
-            $("#joinWhatsAppBtn").on("click", function () {
-                const phoneNumber = "+923076620540"; // WhatsApp number
-                const message = encodeURIComponent("Hi, I'm interested in joining your community!"); // Message template
+            // Fetch Links
+            $.getJSON('/fetchLinks', function (data) {
+                $('#joinWhatsAppBtn').attr('href', `${data.whatsapplink}`);
+                $('#joinTelegramBtn').attr('href', `${data.telegramlink}`);
+
+            }).fail(function (jqxhr, textStatus, error) {
+                console.error('Error fetching Links:', error);
+            });
+
+            // Send Message on WhatsApp 
+            $(".contactBtn").on("click", function () {
+                const phoneNumber = "+60179199870"; // WhatsApp number
+                const message = encodeURIComponent("Hi, I'm interested in joining your community! Please Guide me!"); // Message template
                 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
                 window.open(whatsappUrl, "_blank");
             });
 
-        // Submit Subscription Form
-        $('#subscribe').on('submit', function (e) {
-            e.preventDefault(); // Prevent default form submission
+            // Send Message on WhatsApp for review submission 
+            $(".reviewBtn").on("click", function () {
+                const phoneNumber = "+60179199870"; // WhatsApp number
+                const message = encodeURIComponent("Hi, I'm your customer and I want to submit a review."); // Message template
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+                window.open(whatsappUrl, "_blank");
+            });
 
-            const email = $('#email').val();
-
-            if (!email) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Please enter a valid email address!'
-                });
-                return;
-            }
-
-            $.ajax({
-                url: '/subscribe',
-                method: 'POST',
-                contentType: 'application/json',
-                data: JSON.stringify({ email }),
-                success: function (response) {
-                    if (response.status === 'success') {
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Thank You!',
-                            text: response.message,
-                        });
-                    } else if (response.status === 'error') {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Oops...',
-                            text: response.message,
-                        });
-                    }
-                        else {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Oops...',
-                            text: response.message,
-                        });
-                    }
-                },
-                error: function () {
+            // Submit Subscription Form
+            $('.subscribe').on('submit', function (e) {
+                e.preventDefault(); // Prevent default form submission
+                let email;
+                const email1 = $('#email').val();
+                const email2 = $('#email2').val();
+                if(email1) {
+                    email = email1;
+                } else if(email2) {
+                    email = email2;
+                } else {
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
-                        text: 'Something went wrong. Please try again later.',
+                        text: 'Please enter a valid email address!'
                     });
+                    return;
                 }
+
+                $.ajax({
+                    url: '/subscribe',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ email }),
+                    success: function (response) {
+                        if (response.status === 'success') {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Thank You!',
+                                text: response.message,
+                            });
+                        } else if (response.status === 'error') {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: response.message,
+                            });
+                        }
+                        else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: response.message,
+                            });
+                        }
+                    },
+                    error: function () {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Something went wrong. Please try again later.',
+                        });
+                    }
+                });
             });
-        });
 
         });
     </script>

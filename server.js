@@ -27,9 +27,11 @@ MongoClient.connect(mongoUri)
     console.log('Connected to MongoDB');
     
     const usersDb = client.db('Users');
+    const DataDb = client.db('Data');
 
     // Store the database instances in app.locals for access in routes
     app.locals.usersDb = usersDb;
+    app.locals.dataDb = DataDb;
 
     // Import and use the routes
     const routes = require('./routes');

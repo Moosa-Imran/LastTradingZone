@@ -32,7 +32,7 @@
 
         .modal-content {
             position: relative;
-            margin: 20% auto;
+            margin: 10% auto;
             padding: 20px;
             width: 90%;
             max-width: 500px;
@@ -44,7 +44,7 @@
         }
 
         .modal-content h2 {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             font-size: 24px;
         }
 
@@ -82,93 +82,80 @@
             font-weight: bold;
             cursor: pointer;
         }
-
-        .buttonA {
-            background: #2a2a2e;
-            border-radius: 999px;
-            box-shadow: #585858 0 10px 20px -10px;
-            box-sizing: border-box;
-            color: #FFFFFF;
-            cursor: pointer;
-            font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 24px;
-            opacity: 1;
-            outline: 0 solid transparent;
-            padding: 8px 18px;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-            width: fit-content;
-            word-break: break-word;
-            border: 0;
-        }
-
-        .buttonB {
-            background: #fabb04;
-            border-radius: 999px;
-            box-shadow: #fabb04 0 10px 20px -10px;
-            box-sizing: border-box;
-            color: #1a1a1a;
-            cursor: pointer;
-            font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 24px;
-            opacity: 1;
-            outline: 0 solid transparent;
-            padding: 8px 18px;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-            width: fit-content;
-            word-break: break-word;
-            border: 0;
-        }
     </style>
-    <style>
-        /* News Section Styling */
-        .news-section {
-            padding: 50px 0;
-            background-color: #1e1e2f;
-        }
-
-        .news-card {
-            background-color: #292a3a;
-            border-radius: 10px;
-            overflow: hidden;
-            padding: 20px;
-            color: #fff;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .news-card .news-date {
-            font-size: 14px;
-            font-weight: 600;
-            color: #999;
-            margin-bottom: 10px;
-        }
-
-        .news-card .news-heading {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .news-card .news-description {
-            font-size: 16px;
-            margin-bottom: 20px;
-            color: #ccc;
-        }
-
-        .news-card .news-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 0;
-        }
-    </style>
+        <style>
+            .premium-section {
+                background-color: #121212;
+                color: #e0e0e0;
+                padding: 60px 0;
+                font-family: 'Arial', sans-serif;
+            }
+    
+            .container h2 {
+                color: #ffffff;
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+    
+            .container p {
+                color: #b0b0b0;
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+    
+            #premiumRegistrationForm {
+                background-color: #1e1e2f;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+                text-align: left;
+            }
+    
+            .form-group {
+                margin-bottom: 20px;
+            }
+    
+            .form-group label {
+                font-weight: bold;
+                display: block;
+                margin-bottom: 5px;
+            }
+    
+            .form-control {
+                width: 100%;
+                padding: 10px;
+                border-radius: 4px;
+                border: 1px solid #444;
+                background-color: #2b2b2b;
+                color: #fff;
+            }
+    
+            .radio-group {
+                margin-top: 10px;
+            }
+    
+            .radio-inline {
+                margin-right: 15px;
+                cursor: pointer;
+            }
+    
+            .radio-inline input {
+                margin-right: 5px;
+            }
+    
+            .btn-primary {
+                background-color: #ff5722;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+    
+            .btn-primary:hover {
+                background-color: #e64a19;
+            }
+        </style>
 
 </head>
 
@@ -190,26 +177,11 @@
             <div class="modal-images">
                 <div>
                     <img src="assets/images/resource/whatsapp.png" alt="Join WhatsApp Group">
-                    <a id="joinWhatsAppBtn" href="#" class="btn btn-success" target="_blank">Join WhatsApp</a>
+                    <a id="joinWhatsAppBtn" class="btn btn-success" target="_blank">Join WhatsApp</a>
                 </div>
                 <div>
                     <img src="assets/images/resource/telegram.png" alt="Join Telegram Group">
-                    <a id="joinTelegramBtn" href="#" class="btn btn-primary" target="_blank">Join Telegram</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Pop Up Modal Structure -->
-    <div id="joinOptModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Join Our Community</h2>
-            <div class="modal-images">
-                <div>
-                    <a id="joinBtn" class="buttonA" target="_blank">Join Free</a>
-                </div>
-                <div>
-                    <a href="premium.html" class="buttonB" target="_blank">Join Premium</a>
+                    <a href="https://t.me/your-group-link" class="btn btn-primary" target="_blank">Join Telegram</a>
                 </div>
             </div>
         </div>
@@ -238,12 +210,18 @@
                             <li><a href="/">Home</a>
                             </li>
                             <li><a href="about.html">About</a></li>
-                            <li><a href="#service">Services</a></li>
-                            <li><a href="news.html">News</a></li>
-                            <li><a class="contactBtn" href="">Contact</a></li>
+                            <li><a href="#">Services <span>+</span></a>
+                                <ul class="sub-menu upper">
+                                    <li><a href="">Service 1</a></li>
+                                    <li><a href="">Service 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">News</a>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                         <div class="header-button upper1">
-                            <a class="joinOptBtn" href="#">Join Now</a>
+                            <a href="#">Join Now</a>
                         </div>
                     </nav>
                 </div>
@@ -255,11 +233,18 @@
         <div class="mobile-menu">
             <nav class="cripto_menu">
                 <ul class="nav_scroll">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Home</a>
+                    </li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#service">Services</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a class="contactBtn" href="contact.html">Contact</a></li>
+                    <li><a href="#service">Services <span>+</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="">Service 1</a></li>
+                            <li><a href="">Service 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">News</a>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -276,10 +261,10 @@
                 <div class="col-lg-12">
                     <div class="breatcome-content text-center">
                         <div class="breatcome-title">
-                            <h1>Market News</h1>
+                            <h1>Join Premium</h1>
                         </div>
                         <div class="breatcome-text">
-                            <a href="about.html"><span>Home</span>News</a>
+                            <a href="/"><span>Home</span>Premium</a>
                         </div>
                     </div>
                 </div>
@@ -288,17 +273,133 @@
     </div>
     <div class="clearfix" style="clear: both;"></div>
     <!-- ===============//breatcome section end here \\================= -->
+    <!-- jquery js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-    <!-- News Section -->
-    <section class="news-section">
+    <!-- Join Premium Section -->
+    <section class="premium-section">
         <div class="container">
-            <div class="row">
-                <!-- News will be dynamically inserted here -->
-            </div>
+            <h2>Join Our Premium Membership</h2>
+            <p>Unlock exclusive benefits and premium content.</p>
+            <form id="premiumRegistrationForm">
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" class="form-control" id="fullName" name="fullName" required>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" required>
+                </div>
+
+                <!-- Contact Method -->
+                <div class="form-group">
+                    <label>Subscription Method:</label>
+                    <div class="radio-group">
+                        <label class="radio-inline">
+                            <input type="radio" name="contactMethod" value="whatsapp" required> WhatsApp
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="contactMethod" value="telegram" required> Telegram
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" required>
+                </div>
+
+                <!-- Referral Source -->
+                <div class="form-group">
+                    <label for="referralSource">How did you hear about us?</label>
+                    <select class="form-control" id="referralSource" name="referralSource" required>
+                        <option selected disabled value="default">Select Source</option>
+                        <option value="facebook">Facebook Ad</option>
+                        <option value="tiktok">TikTok</option>
+                        <option value="friend">Some Friend</option>
+                    </select>
+                </div>
+                <script>
+                    $('#referralSource').change(function () {
+                        if ($(this).val() === 'friend') {
+                            $('#friendNameGroup').show();
+                        } else {
+                            $('#friendNameGroup').hide();
+                        }
+                    });
+                </script>
+
+                <!-- Friend's Name -->
+                <div class="form-group" id="friendNameGroup" style="display: none;">
+                    <label for="friendName">Friend's Name:</label>
+                    <input type="text" class="form-control" id="friendName" name="friendName">
+                </div>
+
+                <!-- Plan -->
+                <div class="form-group">
+                    <label for="plan">Select Plan:</label>
+                    <select class="form-control" id="plan" name="plan" required>
+                        <option selected disabled value="default">Select Plan</option>
+                        <option value="plan1">30$ for Month</option>
+                        <option value="plan2">150$ for 6 Months</option>
+                        <option value="plan3">250$ for Year</option>
+                    </select>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method:</label>
+                    <select disabled class="form-control" id="paymentMethod" name="paymentMethod" required>
+                        <option selected disabled value="default">Select Payment Method</option>
+                        <option value="btc">BTC</option>
+                        <option value="usdt">USDT</option>
+                        <option value="doge">DOGE</option>
+                    </select>
+                </div>
+
+                <script>
+                    $('#plan').change(function () {
+                        if($(this).val() !== 'default') {
+                            $('#paymentMethod').removeAttr('disabled');
+                        } else { 
+                            $('#paymentMethod').attr('disabled', 'disabled');
+                        }
+                    });
+                </script>
+                
+                <!-- Payment Instrction -->
+                <div class="form-group" style="display: none;">
+                    <label for="paymentInstruction">Payment Instructions:</label>
+                    <p>Send the payment to the following address:</p>
+                    <p id="paymentAddress"></p>
+                    <div id="qrCodeImage"></div>
+                    <p>After sending the payment, please fill out the form below with the transaction hash and a screenshot of the payment.</p>
+                </div>
+
+                <!-- Transaction Hash -->
+                <div class="form-group">
+                    <label for="transactionHash">Transaction Hash:</label>
+                    <input type="text" class="form-control" id="transactionHash" name="transactionHash" required>
+                </div>
+
+                <!-- Payment Screenshot -->
+                <div class="form-group">
+                    <label for="paymentScreenshot">Upload Payment Screenshot:</label>
+                    <input type="file" class="form-control" id="paymentScreenshot" name="paymentScreenshot" accept="image/*" required>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
     </section>
-
-
+    
+    
     <!--==================================================-->
     <!-- Start Last Trading Zone Footer Middle Area -->
     <!--==================================================-->
@@ -422,9 +523,6 @@
     <!-- Start scroll Area -->
     <!--==================================================-->
 
-    <!-- jquery js -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- bootstrap js -->
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
@@ -459,93 +557,6 @@
     <script>
         $(document).ready(function () {
 
-            // Fetch news on page load
-            fetchNews();
-
-            // Open Modal
-            $(".joinOptBtn").on("click", function () {
-                $("#joinOptModal").fadeIn();
-            });
-
-            // Close Modal
-            $(".close, #joinOptModal").on("click", function (e) {
-                if (e.target === this) {
-                    $("#joinOptModal").fadeOut();
-                }
-            });
-            // Open Free Modal
-            $("#joinBtn").on("click", function () {
-                $("#joinOptModal").fadeOut();
-                $("#joinModal").fadeIn();
-            });
-
-            // Close Free Modal
-            $(".close, #joinModal").on("click", function (e) {
-                if (e.target === this) {
-                    $("#joinModal").fadeOut();
-                }
-            });
-
-            // Fetch Links
-            $.getJSON('/fetchLinks', function (data) {
-                $('#joinWhatsAppBtn').attr('href', `${data.whatsapplink}`);
-                $('#joinTelegramBtn').attr('href', `${data.telegramlink}`);
-
-            }).fail(function (jqxhr, textStatus, error) {
-                console.error('Error fetching Links:', error);
-            });
-
-            // Send Message on WhatsApp 
-            $(".contactBtn").on("click", function () {
-                const phoneNumber = "+60179199870"; // WhatsApp number
-                const message = encodeURIComponent("Hi, I'm interested in joining your community! Please Guide me!"); // Message template
-                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-                window.open(whatsappUrl, "_blank");
-            });
-
-            const newsContainer = $('.news-section .row'); // Select the container where news will be rendered
-
-            // Function to fetch news from the backend
-            function fetchNews() {
-                $.ajax({
-                    url: '/getNews?limit=10',
-                    method: 'GET',
-                    dataType: 'json',
-                    success: function (response) {
-                        if (response.status) {
-                            renderNews(response.news);
-                        } else {
-                            console.error('Failed to fetch news:', response.message);
-                        }
-                    },
-                    error: function (error) {
-                        console.error('Error fetching news:', error);
-                    }
-                });
-            }
-
-            // Function to render news into the DOM
-            function renderNews(news) {
-                newsContainer.empty(); // Clear existing news
-
-                news.forEach(function (item) {
-                    const newsCard = `
-            <div class="col-lg-6 col-md-12 mb-4">
-                <div class="news-card">
-                    <p class="news-date">${new Date(item.newsDate).toLocaleDateString()}</p>
-                    <h3 class="news-heading">${item.newsHeading}</h3>
-                    <p class="news-description">${item.newsDescription}</p>
-                    <img
-                        src="main.lasttradingzone.com/uploads/news/${item.newsImage}"
-                        alt="${item.newsHeading} Image"
-                        class="news-image"
-                    />
-                </div>
-            </div>
-        `;
-                    newsContainer.append(newsCard);
-                });
-            }
             // Submit Subscription Form
             $('.subscribe').on('submit', function (e) {
                 e.preventDefault(); // Prevent default form submission
@@ -596,7 +607,6 @@
                     }
                 });
             });
-
 
         });
     </script>
