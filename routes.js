@@ -3,8 +3,37 @@ const path = require('path');
 const { ObjectId } = require('mongodb');
 const router = express.Router();
 const dotenv = require('dotenv');
+const multer = require('multer');
 
 dotenv.config();
+
+// Set storage engine
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, 'public/uploads/payments')); // Specify the upload directory
+    },
+    filename: (req, file, cb) => {
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+        cb(null, uniqueSuffix + path.extname(file.originalname)); // Save file with unique name
+    }
+});
+
+// Initialize multer
+const upload = multer({
+    storage: storage,
+    fileFilter: (req, file, cb) => {
+        // Validate file type
+        const fileTypes = /jpeg|jpg|png/;
+        const extname = fileTypes.test(path.extname(file.originalname).toLowerCase());
+        const mimetype = fileTypes.test(file.mimetype);
+
+        if (extname && mimetype) {
+            cb(null, true);
+        } else {
+            cb(new Error('Only images are allowed (JPEG, JPG, PNG)'));
+        }
+    }
+}).single('paymentScreenshot'); // Field name from the form
 
 // Protected Route Middleware
 function isAuthenticated(req, res, next) {
@@ -49,6 +78,56 @@ router.get('/getNews', async (req, res) => {
     }
 });
 
+// Route for Registering Premium User
+router.post('/premiumRegistration', upload, async (req, res) => {
+    const DataDb = req.app.locals.dataDb;
+
+    try {
+        // Extract data from the request body
+        const {
+            fullName,
+            phoneNumber,
+            contactMethod,
+            email,
+            referralSource,
+            friendName,
+            plan,
+            transactionID
+        } = req.body;
+
+        // Validate required fields
+        if (!fullName || !phoneNumber || !contactMethod || !email || !referralSource || !plan || !transactionID || !req.file) {
+            return res.status(400).json({ status: false, message: 'All required fields and payment screenshot must be provided' });
+        }
+
+        // Save the registration data
+        const registrationData = {
+            fullName,
+            phoneNumber,
+            contactMethod,
+            email,
+            referralSource,
+            friendName: referralSource === 'friend' ? friendName : null,
+            plan,
+            transactionID,
+            screenshotPath: `/uploads/${req.file.filename}`, // Path to the uploaded file
+            createdAt: new Date(),
+            status: 'Pending'
+        };
+
+        // Insert the data into the database
+        const result = await DataDb.collection('Payments').insertOne(registrationData);
+
+        res.status(200).json({
+            status: true,
+            message: 'Registration submitted successfully',
+            data: { registrationId: result.insertedId }
+        });
+    } catch (error) {
+        console.error('Error handling premium registration:', error);
+        res.status(500).json({ status: false, message: 'Internal server error' });
+    }
+});
 
 
 

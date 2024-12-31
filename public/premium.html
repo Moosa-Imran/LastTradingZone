@@ -83,79 +83,6 @@
             cursor: pointer;
         }
     </style>
-        <style>
-            .premium-section {
-                background-color: #121212;
-                color: #e0e0e0;
-                padding: 60px 0;
-                font-family: 'Arial', sans-serif;
-            }
-    
-            .container h2 {
-                color: #ffffff;
-                font-size: 32px;
-                margin-bottom: 20px;
-            }
-    
-            .container p {
-                color: #b0b0b0;
-                font-size: 16px;
-                margin-bottom: 40px;
-            }
-    
-            #premiumRegistrationForm {
-                background-color: #1e1e2f;
-                padding: 30px;
-                border-radius: 8px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-                text-align: left;
-            }
-    
-            .form-group {
-                margin-bottom: 20px;
-            }
-    
-            .form-group label {
-                font-weight: bold;
-                display: block;
-                margin-bottom: 5px;
-            }
-    
-            .form-control {
-                width: 100%;
-                padding: 10px;
-                border-radius: 4px;
-                border: 1px solid #444;
-                background-color: #2b2b2b;
-                color: #fff;
-            }
-    
-            .radio-group {
-                margin-top: 10px;
-            }
-    
-            .radio-inline {
-                margin-right: 15px;
-                cursor: pointer;
-            }
-    
-            .radio-inline input {
-                margin-right: 5px;
-            }
-    
-            .btn-primary {
-                background-color: #ff5722;
-                border: none;
-                padding: 10px 20px;
-                border-radius: 5px;
-                font-size: 16px;
-                cursor: pointer;
-            }
-    
-            .btn-primary:hover {
-                background-color: #e64a19;
-            }
-        </style>
 
 </head>
 
@@ -278,128 +205,132 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
     <!-- Join Premium Section -->
-    <section class="premium-section">
+    <section class="premium-section py-5" style="background-color: #121212; color: #ffffff;">
         <div class="container">
-            <h2>Join Our Premium Membership</h2>
-            <p>Unlock exclusive benefits and premium content.</p>
-            <form id="premiumRegistrationForm">
+            <h2 class="text-center mb-4" style="color: #ffcc00;">Join Our Premium Membership</h2>
+            <p class="text-center text-muted mb-5" style="color: #cccccc;">Unlock exclusive benefits and premium content
+                tailored just for you.</p>
+
+            <form id="premiumRegistrationForm" class="shadow p-4 rounded" style="background-color: #1e1e1e;">
                 <!-- Full Name -->
-                <div class="form-group">
-                    <label for="fullName">Full Name:</label>
-                    <input type="text" class="form-control" id="fullName" name="fullName" required>
+                <div class="form-group mb-3">
+                    <label for="fullName" class="form-label" style="color: #ffffff;">Full Name:</label>
+                    <input type="text" class="form-control" id="fullName" name="fullName"
+                        placeholder="Enter your full name" required
+                        style="background-color: #2b2b2b; color: #ffffff; border: 1px solid #444;">
                 </div>
 
                 <!-- Phone Number -->
-                <div class="form-group">
-                    <label for="phoneNumber">Phone Number:</label>
-                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" required>
+                <div class="form-group mb-3">
+                    <label for="phoneNumber" class="form-label" style="color: #ffffff;">Phone Number:</label>
+                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"
+                        placeholder="Enter your phone number" required
+                        style="background-color: #2b2b2b; color: #ffffff; border: 1px solid #444;">
                 </div>
 
                 <!-- Contact Method -->
-                <div class="form-group">
-                    <label>Subscription Method:</label>
-                    <div class="radio-group">
-                        <label class="radio-inline">
-                            <input type="radio" name="contactMethod" value="whatsapp" required> WhatsApp
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="contactMethod" value="telegram" required> Telegram
-                        </label>
+                <div class="form-group mb-3">
+                    <label class="form-label" style="color: #ffffff;">Subscription Method:</label>
+                    <div class="d-flex gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="contactMethod" value="whatsapp"
+                                id="contactWhatsApp" required>
+                            <label class="form-check-label" for="contactWhatsApp"
+                                style="color: #ffffff;">WhatsApp</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="contactMethod" value="telegram"
+                                id="contactTelegram" required>
+                            <label class="form-check-label" for="contactTelegram"
+                                style="color: #ffffff;">Telegram</label>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Email -->
-                <div class="form-group">
-                    <label for="Email">Email</label>
-                    <input type="text" class="form-control" id="email" name="email" required>
+                <div class="form-group mb-3">
+                    <label for="email" class="form-label" style="color: #ffffff;">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email"
+                        placeholder="Enter your email address" required
+                        style="background-color: #2b2b2b; color: #ffffff; border: 1px solid #444;">
                 </div>
 
                 <!-- Referral Source -->
-                <div class="form-group">
-                    <label for="referralSource">How did you hear about us?</label>
-                    <select class="form-control" id="referralSource" name="referralSource" required>
+                <div class="form-group mb-3">
+                    <label for="referralSource" class="form-label" style="color: #ffffff;">How did you hear about
+                        us?</label>
+                    <select class="form-select" id="referralSource" name="referralSource" required
+                        style="background-color: #2b2b2b; color: #ffffff; border: 1px solid #444;">
                         <option selected disabled value="default">Select Source</option>
                         <option value="facebook">Facebook Ad</option>
                         <option value="tiktok">TikTok</option>
-                        <option value="friend">Some Friend</option>
+                        <option value="friend">Friend</option>
+                        <option value="friend">Other</option>
                     </select>
                 </div>
-                <script>
-                    $('#referralSource').change(function () {
-                        if ($(this).val() === 'friend') {
-                            $('#friendNameGroup').show();
-                        } else {
-                            $('#friendNameGroup').hide();
-                        }
-                    });
-                </script>
 
                 <!-- Friend's Name -->
-                <div class="form-group" id="friendNameGroup" style="display: none;">
-                    <label for="friendName">Friend's Name:</label>
-                    <input type="text" class="form-control" id="friendName" name="friendName">
+                <div class="form-group mb-3" id="friendNameGroup" style="display: none;">
+                    <label for="friendName" class="form-label" style="color: #ffffff;">Friend's Name:</label>
+                    <input type="text" class="form-control" id="friendName" name="friendName"
+                        placeholder="Enter your friend's name"
+                        style="background-color: #2b2b2b; color: #ffffff; border: 1px solid #444;">
                 </div>
 
                 <!-- Plan -->
-                <div class="form-group">
-                    <label for="plan">Select Plan:</label>
-                    <select class="form-control" id="plan" name="plan" required>
+                <div class="form-group mb-3">
+                    <label for="plan" class="form-label" style="color: #ffffff;">Select Plan:</label>
+                    <select class="form-select" id="plan" name="plan" required
+                        style="background-color: #2b2b2b; color: #ffffff; border: 1px solid #444;">
                         <option selected disabled value="default">Select Plan</option>
-                        <option value="plan1">30$ for Month</option>
-                        <option value="plan2">150$ for 6 Months</option>
-                        <option value="plan3">250$ for Year</option>
+                        <option value="30">30$ for 1 Month</option>
+                        <option value="150">150$ for 6 Months</option>
+                        <option value="250">250$ for 1 Year</option>
                     </select>
                 </div>
 
-                <!-- Payment Method -->
-                <div class="form-group">
-                    <label for="paymentMethod">Payment Method:</label>
-                    <select disabled class="form-control" id="paymentMethod" name="paymentMethod" required>
-                        <option selected disabled value="default">Select Payment Method</option>
-                        <option value="btc">BTC</option>
-                        <option value="usdt">USDT</option>
-                        <option value="doge">DOGE</option>
-                    </select>
+                <!-- Note -->
+                <div style="display: none;" class="note form-group mb-4">
+                    <p style="color: red;"><b>Note:</b> Send $<b id="plan_amount"></b> to the wallet
+                        given below using <b>USDT BEP20</b> other wise your payment will be canceled!</p>
                 </div>
 
-                <script>
-                    $('#plan').change(function () {
-                        if($(this).val() !== 'default') {
-                            $('#paymentMethod').removeAttr('disabled');
-                        } else { 
-                            $('#paymentMethod').attr('disabled', 'disabled');
-                        }
-                    });
-                </script>
-                
-                <!-- Payment Instrction -->
-                <div class="form-group" style="display: none;">
-                    <label for="paymentInstruction">Payment Instructions:</label>
-                    <p>Send the payment to the following address:</p>
-                    <p id="paymentAddress"></p>
-                    <div id="qrCodeImage"></div>
-                    <p>After sending the payment, please fill out the form below with the transaction hash and a screenshot of the payment.</p>
+                <!-- Wallet Address -->
+                <div class="form-group mb-4 text-center">
+                    <img src="assets/images/resource/QR_Code.jpg" alt="QR Code" class="img-fluid mb-2"
+                        style="width: 180px;">
+                    <p style="color: #ffffff;"><strong>Wallet Address:</strong></p>
+                    <div class="input-group">
+                        <input type="text" id="walletAddress" class="form-control text-center"
+                            value="0x541c35cb937b6d3a3e87492ebee501b77b51f39e" readonly
+                            style="background-color: #2b2b2b; color: #ffffff; border: 1px solid #444;">
+                        <div class="btn btn-outline-light" id="copyButton">Copy</div>
+                    </div>
                 </div>
 
-                <!-- Transaction Hash -->
-                <div class="form-group">
-                    <label for="transactionHash">Transaction Hash:</label>
-                    <input type="text" class="form-control" id="transactionHash" name="transactionHash" required>
+                <!-- Transaction ID -->
+                <div class="form-group mb-3">
+                    <label for="transactionID" class="form-label" style="color: #ffffff;">Transaction ID:</label>
+                    <input type="text" class="form-control" id="transactionID" name="transactionID"
+                        placeholder="Enter your transaction ID" required
+                        style="background-color: #2b2b2b; color: #ffffff; border: 1px solid #444;">
                 </div>
 
                 <!-- Payment Screenshot -->
-                <div class="form-group">
-                    <label for="paymentScreenshot">Upload Payment Screenshot:</label>
-                    <input type="file" class="form-control" id="paymentScreenshot" name="paymentScreenshot" accept="image/*" required>
+                <div class="form-group mb-4">
+                    <label for="paymentScreenshot" class="form-label" style="color: #ffffff;">Upload Payment
+                        Screenshot:</label>
+                    <input type="file" class="form-control" id="paymentScreenshot" name="paymentScreenshot"
+                        accept="image/*" required
+                        style="background-color: #2b2b2b; color: #ffffff; border: 1px solid #444;">
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-warning w-100">Submit</button>
             </form>
         </div>
     </section>
-    
-    
+
     <!--==================================================-->
     <!-- Start Last Trading Zone Footer Middle Area -->
     <!--==================================================-->
@@ -552,6 +483,65 @@
     <script src="assets/js/jquery.barfiller.js"></script>
     <!-- Sweet Alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    
+    <script>
+        $(document).ready(function () {
+            // Toggle Friend's Name field visibility
+            $('#referralSource').change(function () {
+                const referralSource = $(this).val();
+                if (referralSource === 'friend') {
+                    $('#friendNameGroup').slideDown();
+                    $('#friendName').attr('required', true);
+                } else {
+                    $('#friendNameGroup').slideUp();
+                    $('#friendName').removeAttr('required');
+                }
+            });
+
+            // Copy wallet address to clipboard
+            $('#copyButton').click(function () {
+                const walletAddress = $('#walletAddress').val();
+                navigator.clipboard.writeText(walletAddress).then(() => {
+                    alert('Wallet Address Copied!');
+                });
+            });
+
+            // Update Plan Note dynamically
+            $('#plan').change(function () {
+                const plan = $(this).val();
+                $('.note').show();
+                $('#plan_amount').text(plan);
+            });
+
+            $('#premiumRegistrationForm').on('submit', function (e) {
+                e.preventDefault();
+
+                // Create a FormData object
+                let formData = new FormData(this);
+
+                // Make an AJAX request
+                $.ajax({
+                    url: '/premiumRegistration',
+                    type: 'POST',
+                    data: formData,
+                    processData: false, 
+                    contentType: false,
+                    success: function (response) {
+                        if (response.status) {
+                            alert('Registration submitted successfully!');
+                        } else {
+                            alert('Error: ' + response.message);
+                        }
+                    },
+                    error: function (xhr) {
+                        alert('An error occurred while submitting the form.');
+                    }
+                });
+            });
+
+        });
+    </script>
 
 
     <script>
