@@ -233,13 +233,13 @@
                     <label class="form-label" style="color: #ffffff;">Subscription Method:</label>
                     <div class="d-flex gap-3">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="contactMethod" value="whatsapp"
+                            <input class="form-check-input" type="radio" name="contactMethod" value="Whatsapp"
                                 id="contactWhatsApp" required>
                             <label class="form-check-label" for="contactWhatsApp"
                                 style="color: #ffffff;">WhatsApp</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="contactMethod" value="telegram"
+                            <input class="form-check-input" type="radio" name="contactMethod" value="Telegram"
                                 id="contactTelegram" required>
                             <label class="form-check-label" for="contactTelegram"
                                 style="color: #ffffff;">Telegram</label>
@@ -262,10 +262,10 @@
                     <select class="form-select" id="referralSource" name="referralSource" required
                         style="background-color: #2b2b2b; color: #ffffff; border: 1px solid #444;">
                         <option selected disabled value="default">Select Source</option>
-                        <option value="facebook">Facebook Ad</option>
-                        <option value="tiktok">TikTok</option>
-                        <option value="friend">Friend</option>
-                        <option value="friend">Other</option>
+                        <option value="Facebook">Facebook Ad</option>
+                        <option value="Tiktok">TikTok</option>
+                        <option value="Friend">Friend</option>
+                        <option value="Other">Other</option>
                     </select>
                 </div>
 
@@ -503,7 +503,11 @@
             $('#copyButton').click(function () {
                 const walletAddress = $('#walletAddress').val();
                 navigator.clipboard.writeText(walletAddress).then(() => {
-                    alert('Wallet Address Copied!');
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Copied!',
+                        text: 'Wallet Address Copied!'
+                    });
                 });
             });
 
@@ -529,13 +533,25 @@
                     contentType: false,
                     success: function (response) {
                         if (response.status) {
-                            alert('Registration submitted successfully!');
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Success',
+                                text: 'Registration submitted successfully!'
+                            });
                         } else {
-                            alert('Error: ' + response.message);
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Error',
+                                text: response.message
+                            });
                         }
                     },
                     error: function (xhr) {
-                        alert('An error occurred while submitting the form.');
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'An error occurred while submitting the form.'
+                        });
                     }
                 });
             });
